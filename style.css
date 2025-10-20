@@ -993,3 +993,26 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
+/* --- Tên người được tặng --- */
+.signature {
+  position: fixed;
+  top: 150px; /* dưới dòng Happy */
+  color: #ffb6c1; /* hồng nhạt nổi bật */
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493; /* hiệu ứng phát sáng nhẹ */
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Hiệu ứng sáng mờ dần */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ffb6c1, 0 0 10px #ff69b4, 0 0 20px #ff1493;
+  }
+  to {
+    text-shadow: 0 0 20px #ff69b4, 0 0 30px #ff1493, 0 0 40px #ff69b4;
+  }
+}
+
