@@ -7,7 +7,7 @@
 }
 
 :root {
-  --dark-color: #00333e;
+  --dark-color: #000;
 }
 
 body {
@@ -137,7 +137,7 @@ body {
   transform: translate(-50%, -100%);
   width: 8vmin;
   height: 8vmin;
-  background-color: #6bf0ff;
+  background-color: #ffb6c1;
   filter: blur(10vmin);
 }
 .flower__leaf {
@@ -147,12 +147,13 @@ body {
   width: 8vmin;
   height: 11vmin;
   border-radius: 51% 49% 47% 53%/44% 45% 55% 69%;
-  background-color: #a7ffee;
-  background-image: linear-gradient(to top, #54b8aa, #a7ffee);
+  background-color: #ffb6c1; /* hồng nhạt */
+  background-image: linear-gradient(to top, transparent 10%, #ff69b4, #ffc0cb); /* hồng đậm lên nhạt */
   transform-origin: bottom center;
   opacity: 0.9;
-  box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0 2vmin rgba(255, 182, 193, 0.8);
 }
+
 .flower__leaf--1 {
   transform: translate(-10%, 1%) rotateY(40deg) rotateX(-50deg);
 }
@@ -168,7 +169,7 @@ body {
   transform-origin: bottom left;
   border-radius: 4vmin 10vmin 4vmin 4vmin;
   transform: translate(0%, 18%) rotateX(70deg) rotate(-43deg);
-  background-image: linear-gradient(to top, #39c6d6, #a7ffee);
+  background-image: linear-gradient(to top, #ff1493, #ffc0cb);
   z-index: 1;
   opacity: 0.8;
 }
@@ -209,7 +210,8 @@ body {
   height: var(--h);
   border-top-right-radius: var(--h);
   border-bottom-left-radius: var(--h);
-  background-image: linear-gradient(to top, rgba(20, 117, 122, 0.4), #39c6d6);
+  background-image: linear-gradient(to top, rgba(255, 105, 180, 0.4), #ffc0cb);
+
 }
 .flower__line__leaf--1 {
   transform: rotate(70deg) rotateY(30deg);
@@ -252,7 +254,7 @@ body {
   animation: light-ans 4s linear infinite backwards;
 }
 .flower__light:nth-child(odd) {
-  background-color: #23f0ff;
+  background-color: #ff9ed6;
 }
 .flower__light--1 {
   left: -2vmin;
@@ -497,7 +499,7 @@ body {
   width: 30vmin;
   height: 50vmin;
   border-top-left-radius: 100%;
-  border-left: 2vmin solid #079097;
+  border-left: 2vmin solid #ff69b4;
   background-image: linear-gradient(to bottom, transparent, var(--dark-color) 60%);
   -webkit-mask-image: linear-gradient(to top, transparent 30%, #079097 60%);
 }
@@ -632,8 +634,8 @@ body {
   border-radius: 100% 0% 0% 100%/100% 100% 0% 0%;
   box-shadow: inset 0 2px 1vmin hsla(184, 97%, 58%, 0.2);
   background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #159faa 50%, transparent 50%, transparent);
-  -webkit-mask-image: linear-gradient(to bottom right, #159faa 50%, transparent 50%, transparent);
-  mask-image: linear-gradient(to bottom right, #159faa 50%, transparent 50%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom right, #ff85c1 50%, transparent 50%, transparent);
+  mask-image: linear-gradient(to bottom right, #ff85c1 50%, transparent 50%, transparent);
 }
 .flower__g-fr {
   position: absolute;
@@ -1016,3 +1018,94 @@ body {
   }
 }
 
+/* 🌸 Đổi toàn bộ thân, lá, cỏ sang màu hồng */
+.flower__line {
+  background-image: linear-gradient(to left,
+    rgba(0, 0, 0, 0.2),
+    transparent,
+    rgba(255, 255, 255, 0.2)
+  ), linear-gradient(to top, transparent 10%, #ff69b4, #ffc0cb) !important;
+}
+
+.flower__line__leaf {
+  background-image: linear-gradient(to top, rgba(255, 105, 180, 0.4), #ffc0cb) !important;
+}
+
+.flower__grass,
+.flower__g-long,
+.long-g .leaf {
+  --c: #ff69b4 !important;
+}
+
+.flower__grass__leaf {
+  background-image: linear-gradient(to top, transparent, transparent 30%, #ff85c1) !important;
+}
+
+.flower__g-front__line {
+  background-image: linear-gradient(to top, transparent, #ff69b4, transparent 100%) !important;
+}
+
+.flower__g-fr .leaf {
+  border-left: 2vmin solid #ff69b4 !important;
+  -webkit-mask-image: linear-gradient(to top, transparent 25%, #ffb6c1 50%) !important;
+}
+
+.flower__g-right .leaf {
+  border-left: 2vmin solid #ff69b4 !important;
+  -webkit-mask-image: linear-gradient(to top, transparent 30%, #ff85c1 60%) !important;
+}
+
+.flower__g-fr__leaf {
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color) 98%), linear-gradient(to bottom right, #ff9ed6 45%, transparent 50%, transparent) !important;
+  -webkit-mask-image: linear-gradient(135deg, #ff69b4 40%, transparent 50%, transparent) !important;
+}
+
+/* 🌸 Đổi màu chỉ phần hoa sang hồng, giữ cỏ xung quanh màu xanh */
+.flower__line {
+  background-image: linear-gradient(to left,
+    rgba(0, 0, 0, 0.2),
+    transparent,
+    rgba(255, 255, 255, 0.2)
+  ), linear-gradient(to top, transparent 10%, #ff69b4, #ffc0cb) !important;
+}
+
+/* Lá nhỏ dọc thân hoa */
+.flower__line__leaf {
+  background-image: linear-gradient(to top, rgba(255, 105, 180, 0.4), #ffc0cb) !important;
+}
+
+/* Cánh hoa */
+.flower__leaf {
+  background-color: #ffb6c1 !important;
+  background-image: linear-gradient(to top, transparent 10%, #ff69b4, #ffc0cb) !important;
+  box-shadow: inset 0 0 2vmin rgba(255, 182, 193, 0.8) !important;
+}
+
+/* Vòng tròn trắng giữa bông */
+.flower__white-circle {
+  background-color: #fff !important;
+}
+
+/* Nhánh nhỏ hồng phía trên */
+.flower__g-front__line {
+  background-image: linear-gradient(to top, transparent, #ff69b4, transparent 100%) !important;
+}
+
+/* Lá cong 2 bên thân hoa */
+.flower__g-fr .leaf,
+.flower__g-right .leaf,
+.flower__g-front__leaf,
+.flower__g-fr__leaf {
+  border-left: 2vmin solid #ff69b4 !important;
+  background-image: linear-gradient(to bottom left, transparent, #ffb6c1 98%), 
+                    linear-gradient(to bottom right, #ff9ed6 45%, transparent 50%) !important;
+  -webkit-mask-image: linear-gradient(135deg, #ff69b4 40%, transparent 50%, transparent) !important;
+}
+
+/* Các nhánh phụ màu hồng */
+.flower__g-long,
+.flower__g-long * {
+  --c: #ff69b4 !important;
+  border-color: #ff69b4 !important;
+  background-image: linear-gradient(to top, transparent, #ffb6c1) !important;
+}
