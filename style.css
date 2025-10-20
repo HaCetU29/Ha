@@ -7,7 +7,7 @@
 }
 
 :root {
-  --dark-color: #000;
+  --dark-color: #5c0c0c;
 }
 
 body {
@@ -1108,4 +1108,21 @@ body {
   --c: #ff69b4 !important;
   border-color: #ff69b4 !important;
   background-image: linear-gradient(to top, transparent, #ffb6c1) !important;
+}
+/* 🌸 Responsive fix cho điện thoại */
+@media (max-width: 768px) {
+  .happy-woman-day {
+    font-size: 1.6rem; /* nhỏ hơn một chút */
+    top: 20px; /* dịch lên trên ít hơn */
+  }
+
+  .signature {
+    position: relative; /* bỏ cố định */
+    bottom: auto;
+    right: auto;
+    display: block;
+    text-align: center;
+    margin-top: 80px; /* cách dòng Happy Woman's Day ra xa hơn */
+    font-size: 1.2rem;
+  }
 }
